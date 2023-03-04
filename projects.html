@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <title>Projects | Colin McGrath</title>
+  </head>
+  <body class="container">
+    <a href="/" class="btn btn-outline-primary back-btn-position fs-5">
+      <span class="d-lg-none"><</span>
+      <span class="d-none d-lg-block">Back</span>
+    </a>
+    <h1 class="text-center mt-5">Projects</h1>
+    <p class="col-11 mx-auto mb-4 mb-lg-5 text-muted text-center">
+      Click on the photo of any project to open it or the GitHub cat icon to view the code.
+    </p>
+    <section class="projects container">
+      <section class="d-flex flex-column flex-lg-row mb-5">
+        <a href="https://greenwayyard.com/" target="_blank" class="mb-4 col-lg-6">
+          <img class="w-100" src="assets/greenway-website.png" alt="screenshot of a website's contact page" />
+        </a>
+        <div class="ms-lg-5">
+          <h2>Small Business Website</h2>
+          <p class="text-muted">HTML | CSS | PHP | JavaScript | Mobile-First Design | SEO</p>
+          <p>
+            I worked with a local business owner to create a custom website for his landscaping company. The owner provided me
+            with an idea of how he would like the website to look, and we collaborated on finalizing the design.
+          </p>
+          <p>
+            I still work with the owner by managing the site host, updating the content, and improving the design. Currently, I am
+            learning about SEO to get the website to naturally rank higher on search results. I am also experimenting with
+            different tools to optimize my workflow to add pages to the website as efficiently as possible, while maintaining
+            optimal loading speeds.
+          </p>
+        </div>
+      </section>
+      <section class="d-flex flex-column flex-lg-row-reverse mb-5">
+        <a href="/projects/complexity-analysis.html" class="mb-4 col-lg-6">
+          <img class="w-100" src="assets/big-o-code.png" alt="screenshot of big o analysis code" />
+        </a>
+        <div class="me-lg-5">
+          <h2>
+            Java Runtime Complexity API
+            <a href="https://github.com/cmcgrath454/BigOAPI" target="_blank">
+              <img src="/assets/github-mark.png" alt="github icon" />
+            </a>
+          </h2>
+          <p class="text-muted">JavaScript | Jest | AWS Lambda + API Gateway</p>
+          <p>
+            For my university capstone project, I worked with a team to create a runtime complexity learning tool. My role was to
+            write the backend logic to analyze Java code runtime complexity. I created an API and hosted it through AWS. Other
+            members of the group created a front-end that called the API to analyze user code input.
+          </p>
+          <p>
+            I wrote the API in JavaScript, used npm package manager, employed a Java syntax tree parsing package, and used Jest
+            for testing. I created a simple interactive form for users of this site to test out the API with. The API is currently
+            hosted on AWS Lambda with calls routed through AWS API Gateway.
+          </p>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

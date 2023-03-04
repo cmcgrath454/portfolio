@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="/css/custom.css" />
+    <title>Big O Analysis | Colin McGrath</title>
+  </head>
+  <body class="container">
+    <a href="/projects.html" class="btn btn-outline-primary back-btn-position fs-5">
+      <span class="d-lg-none"><</span>
+      <span class="d-none d-lg-block">Back</span>
+    </a>
+    <h1 class="text-center mt-5 d-flex flex-column justify-content-center align-items-center flex-lg-row">
+      Big O API
+      <a href="https://github.com/cmcgrath454/BigOAPI" target="_blank">
+        <img src="/assets/github-mark.png" alt="github icon" class="align-middle ms-lg-3" />
+      </a>
+    </h1>
+    <p class="col-11 mx-auto">
+      This tool can be used to analyze the Big O runtime complexity of a Java code snippet. Replace the code in the input box
+      below and click analyze to see the result. Please note the following about the tool:
+    </p>
+    <ul class="col-11 mx-auto">
+      <li>Recursion complexity analysis is not currently supported</li>
+      <li>For simplicity, this tool is meant for code snippets, not class or method declarations.</li>
+      <li>
+        This tool attempts to catch and highlight unsupported cases in red and underlined. Any such code will not be calculated in
+        the end result.
+      </li>
+      <li>
+        There is an abundance of possible ways to initialize, terminate, and update loops, so this tool sticks to covering the
+        most common methods used.
+      </li>
+      <li>
+        Only shorthand assignment operators
+        <span class="code">(+=, -=, *=, /=)</span>
+        for updating looping variables are currently supported
+      </li>
+      <li><strong>For runtime analysis, we assume that our input is int variable 'n'</strong></li>
+    </ul>
+
+    <div class="my-4 d-lg-flex">
+      <section class="col-lg-6 d-flex flex-column align-content-center mt-4">
+        <div class="form-group">
+          <textarea name="code" id="code" rows="10" class="form-control ff-accent" spellcheck="false" required>
+for (int i = 0; i < n; i++) {
+  for (int j = n; j >= 0; j/=2) {
+    int k = 0;
+    while (k < n) {
+      System.out.println("Hello World");
+      k++;
+    }
+  }
+}</textarea
+          >
+        </div>
+        <button class="btn btn-primary px-3 py-2 mt-3 mx-auto" id="analyze-btn" onclick="analyze(this)">Analyze</button>
+      </section>
+      <section class="col d-flex flex-column align-items-center">
+        <p id="solution" class="fs-3 fw-bold"></p>
+        <p id="code-feedback" class="text-success ff-accent"></p>
+      </section>
+    </div>
+  </body>
+  <script src="/js/big-o-analysis.js"></script>
+</html>

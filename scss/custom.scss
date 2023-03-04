@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat&display=swap");
+
+/* Variables */
+$ff-primary: Montserrat;
+$ff-accent: Courier Prime;
+$primary: #0775a8;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/* Utility Classes */
+.ff-primary {
+  font-family: $ff-primary;
+}
+
+.ff-accent {
+  font-family: $ff-accent;
+}
+
+.cover-vh {
+  min-height: 100vh;
+}
+
+/* General Styling */
+body {
+  font-family: $ff-primary;
+}
+
+p {
+  font-size: 1.1rem;
+}
+
+h2 {
+  font-family: $ff-accent;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.back-btn-position {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+img[alt="github icon"] {
+  width: 3rem;
+  height: auto;
+}
+
+/* Resume Page */
+
+.list-group-item {
+  border-radius: none;
+  border: 0px;
+
+  &.active {
+    color: $primary;
+    background-color: white;
+    scale: 1.3;
+  }
+  &:hover {
+    scale: 1.3;
+    background: none;
+  }
+}
+
+/* Project Page */
+
+section.projects {
+  section>img {
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &:hover {
+      scale: 1.05;
+    }
+  }
+}
+
+/* Big O Analysis API */
+
+#code-feedback {
+  white-space: pre-wrap;
+}
+
+/* Desktop Styles */
+
+@include media-breakpoint-up(lg) {
+  .back-btn-position {
+    top: 5vh;
+    left: 5vw;
+  }
+}
