@@ -22,6 +22,7 @@ function processResponse(body, status) {
       }
       break;
     case 201:
+      document.getElementById('solution').innerText = "";
       const formattedResult = body.result.replace(/\^(\d*)/g, '<sup>$1</sup>').replaceAll('N', 'n');
       document.getElementById('solution').insertAdjacentHTML('beforeend', 'Result: ' + formattedResult);
       let inputCode = document.getElementById('code').value;
