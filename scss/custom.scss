@@ -46,6 +46,10 @@ h2 {
 img[alt="github icon"] {
   width: 3rem;
   height: auto;
+  
+  &:hover {
+    scale: 1.05;
+  }
 }
 
 /* Resume Page */

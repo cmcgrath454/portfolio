@@ -10811,6 +10811,9 @@ img[alt="github icon"] {
   width: 3rem;
   height: auto;
 }
+img[alt="github icon"]:hover {
+  scale: 1.05;
+}
 
 /* Resume Page */
 .list-group-item {
