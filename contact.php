@@ -33,17 +33,10 @@ if ($debug) {
 }
 
 if (!$response_data['success']) {
-    error_log("{$message} \n {$recaptcha_response_str}");
-    echo "
-    <script LANGUAGE='JavaScript'>
-        window.alert('Sorry, we\'ve encountered an issue with Google Recaptcha. Please try again later.');
-        window.location.href = '/';
-    </script>
-    ";
-    exit();
+    error_log($recaptcha_response_str);
 }
 
-if ($response_data['score'] <= 0.4) {
+if ($response_data['success'] && $response_data['score'] <= 0.4) {
     error_log("{$message} \n {$recaptcha_response_str}");
     echo "
     <script LANGUAGE='JavaScript'>
