@@ -1,6 +1,6 @@
 function analyze(btn) {
   btn.disabled = true;
-  fetch('https://cm7vsl37jpzpcr5l2pqzsjppje0onpic.lambda-url.us-east-2.on.aws/', {
+  fetch('https://fz6lk4txy6.execute-api.us-east-2.amazonaws.com/default', {
     method: 'POST',
     body: document.getElementById("code").value,
   })
@@ -35,6 +35,8 @@ function processResponse(body, status) {
       codeFeedback.innerHTML = inputCode;
       break;
     default:
+      codeFeedback.innerText = "Sorry there is an issue with the API right now. Please try again later.";
+      break;
   }
   codeFeedback.scrollIntoView();
   document.getElementById('analyze-btn').disabled = false;
