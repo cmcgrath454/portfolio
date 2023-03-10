@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat&display=swap");
 
 /* Variables */
-$ff-primary: Montserrat;
-$ff-accent: Courier Prime;
+$font-family-base: Montserrat;
+$font-family-accent: Courier Prime;
+$font-size-base: 1.1rem;
 $primary: #0775a8;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 /* Utility Classes */
 .ff-primary {
-  font-family: $ff-primary;
+  font-family: $font-family-base;
 }
 
 .ff-accent {
-  font-family: $ff-accent;
+  font-family: $font-family-accent;
 }
 
 .cover-vh {
@@ -21,16 +22,12 @@ $primary: #0775a8;
 }
 
 /* General Styling */
-body {
-  font-family: $ff-primary;
-}
-
 p {
   font-size: 1.1rem;
 }
 
 h2 {
-  font-family: $ff-accent;
+  font-family: $font-family-accent;
 }
 
 .btn {
