@@ -10862,21 +10862,6 @@ img[alt="github icon"]:hover {
   scale: 1.05;
 }
 
-/* Resume Page */
-.list-group-item {
-  border-radius: none;
-  border: 0px;
-}
-.list-group-item.active {
-  color: #0775a8;
-  background-color: white;
-  font-weight: 800;
-}
-.list-group-item:hover {
-  scale: 1.1;
-  background: none;
-}
-
 /* Project Page */
 section.projects section > a > img {
   border-radius: 5px;

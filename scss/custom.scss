@@ -49,23 +49,6 @@ img[alt="github icon"] {
   }
 }
 
-/* Resume Page */
-
-.list-group-item {
-  border-radius: none;
-  border: 0px;
-
-  &.active {
-    color: $primary;
-    background-color: white;
-    font-weight: 800;
-  }
-  &:hover {
-    scale: 1.1;
-    background: none;
-  }
-}
-
 /* Project Page */
 
 section.projects {
